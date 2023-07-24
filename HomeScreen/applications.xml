@@ -1,14 +1,4 @@
 <APPLICATIONS>
- <APP ID="004">
-  <TITLE>Phone</TITLE>
-  <URL>qrc:/App/Phone/Phone.qml</URL>
-  <ICON_PATH>qrc:/Img/HomeScreen/btn_home_menu_phone</ICON_PATH>
- </APP>
- <APP ID="005">
-  <TITLE>Radio</TITLE>
-  <URL>qrc:/App/Radio/Radio.qml</URL>
-  <ICON_PATH>qrc:/Img/HomeScreen/btn_home_menu_radio</ICON_PATH>
- </APP>
  <APP ID="003">
   <TITLE>Media</TITLE>
   <URL>qrc:/App/Media/Media.qml</URL>
@@ -23,6 +13,16 @@
   <TITLE>Map</TITLE>
   <URL>qrc:/App/Map/Map.qml</URL>
   <ICON_PATH>qrc:/Img/HomeScreen/btn_home_menu_map</ICON_PATH>
+ </APP>
+ <APP ID="005">
+  <TITLE>Radio</TITLE>
+  <URL>qrc:/App/Radio/Radio.qml</URL>
+  <ICON_PATH>qrc:/Img/HomeScreen/btn_home_menu_radio</ICON_PATH>
+ </APP>
+ <APP ID="004">
+  <TITLE>Phone</TITLE>
+  <URL>qrc:/App/Phone/Phone.qml</URL>
+  <ICON_PATH>qrc:/Img/HomeScreen/btn_home_menu_phone</ICON_PATH>
  </APP>
  <APP ID="006">
   <TITLE>Settings</TITLE>

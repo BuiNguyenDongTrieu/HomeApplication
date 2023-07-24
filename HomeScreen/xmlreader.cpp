@@ -4,7 +4,7 @@
 XmlReader::XmlReader(QString filePath, ApplicationsModel &model)
 {
     qDebug() << "Started read XML file (line 6, xmlreader.cpp)";
-    QString path = ("/home/trieubnd/Documents/QT_Projects/ĐỒ ÁN CUỐI KHÓA/Sample Functionality-20230412T084319Z-001/Sample Functionality/Code sample/HomeScreen/" + filePath);
+    QString path = PROJECT_PATH + filePath;
     ReadXmlFile(path);
     PaserXml(model);
 }

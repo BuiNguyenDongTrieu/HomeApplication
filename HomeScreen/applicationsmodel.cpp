@@ -70,7 +70,7 @@ void ApplicationsModel::addApplication(ApplicationItem &item)
 void ApplicationsModel::addApplication(int pos, QString id, QString title, QString url, QString iconPath)
 {
     ApplicationItem item(id, title, url, iconPath);
-    qDebug() << pos << " " << id << " " << title << " " << url << " " << iconPath;
+    //qDebug() << pos << " " << id << " " << title << " " << url << " " << iconPath;
     m_savedData[pos] = item;
 }
 

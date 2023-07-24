@@ -3,7 +3,7 @@
 
 XmlWriter::XmlWriter(QString filePath, ApplicationsModel &savedData, QObject *parent) : QObject(parent)
 {
-    QString path = ("/home/trieubnd/Documents/QT_Projects/ĐỒ ÁN CUỐI KHÓA/Sample Functionality-20230412T084319Z-001/Sample Functionality/Code sample/HomeScreen/" + filePath);
+    QString path = PROJECT_PATH + filePath;
     this->filePath = path;
     model = &savedData;
 }

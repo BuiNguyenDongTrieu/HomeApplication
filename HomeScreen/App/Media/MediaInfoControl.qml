@@ -178,7 +178,7 @@ Item {
         anchors.left: currentTime.left
         icon_off: "qrc:/App/Media/Image/shuffle.png"
         icon_on: "qrc:/App/Media/Image/shuffle-1.png"
-        status: isShuffle
+        status: player.state === MediaPlayer.PlayingState ? player.playlist.playbackMode === 4 : 0
         onClicked: {
             console.log(player.playlist.playbackMode)
             isShuffle = !isShuffle
@@ -260,7 +260,7 @@ Item {
         anchors.right: totalTime.right
         icon_on: "qrc:/App/Media/Image/repeat1_hold.png"
         icon_off: "qrc:/App/Media/Image/repeat.png"
-        status: 0
+        status: player.state === MediaPlayer.PlayingState ? player.playlist.playbackMode === 1 : 0
         onClicked: {
             console.log(player.playlist.playbackMode)
             isLoop = !isLoop

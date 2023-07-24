@@ -48,22 +48,17 @@ MouseArea {
         }
     ]
     onPressed: root.state = "Pressed"
-    onReleased:{
-        root.focus = true
-        root.state = "Focus"
-    }
+    onReleased:root.state = "Focus"
     onCanceled: {
-        root.focus = isFocus
-        if (root.focus == true )
+        if (isFocus)
             root.state = "Focus"
         else
             root.state = "Normal"
     }
 
     onIsFocusChanged: {
-        root.focus = isFocus
         if (isReorder == true) root.state = "Focus"
-        else if (root.focus == true )
+        else if (isFocus)
             root.state = "Focus"
         else
             root.state = "Normal"

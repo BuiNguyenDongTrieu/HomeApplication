@@ -267,7 +267,7 @@ Item {
 
                             for (var pos = 0; pos < visualModel.items.count; pos++) {
                                 var appsItem = visualModel.items.get(pos).model
-                                console.log(visualModel.items.count)
+                                //console.log(visualModel.items.count)
                                 appsModel.addApplication(pos, appsItem.ID, appsItem.title, appsItem.url, appsItem.iconPath)
                             }
 
@@ -275,12 +275,18 @@ Item {
                                 saveXML.saveDataAppMenu()
                             isReorder = false
                         }
+                        onWheel: {
+                            if (wheel.angleDelta.y > 0) scroll.increase()
+                            else scroll.decrease()
+                        }
                     }
 
-                    onFocusChanged: app.focus = icon.focus
+                    //onFocusChanged: app.focus = icon.focus
 
                     Drag.active: app.drag.active
                     Drag.keys: "AppButton"
+                    Drag.hotSpot.x: width/2
+                    Drag.hotSpot.y: height/2
 
                     states: [
                         State {
@@ -302,6 +308,7 @@ Item {
         }
 
         ScrollBar.horizontal: ScrollBar{
+            id: scroll
             anchors.bottom: parent.top
             anchors.left: parent.left
             anchors.right: parent.right
